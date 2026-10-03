@@ -1,0 +1,24 @@
+﻿﻿@{
+ViewData["Title"] = "Product Page";
+}
+
+@model IEnumerable<Product>
+<h1 class="bg-secondary text-white p-2 mt-2">Product Information</h1>
+@foreach (var product in @Model)
+{
+    <div class="container-fluid p-3 bg-body-tertiary border border-2 mb-2">
+        <div class="p-2">
+            <strong>Product Id:</strong>@product.Id
+        </div>
+        <div class="p-2">
+            <strong>Product Name:</strong>@product.ProdName
+        </div>
+        <div class="p-2">
+            <strong>Product Price:</strong>@product.Price
+        </div>
+        <div class="p-2">
+            <strong>Product GST Rate:</strong>@product.GSTRate
+        </div>
+    </div>
+
+}
