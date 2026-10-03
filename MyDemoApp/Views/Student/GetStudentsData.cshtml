@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<MyDemoApp.Models.Student>
+<h1>Student List</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Roll Number</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.RollNumber</td>
+                <td>@student.Name</td>
+                <td>@student.Gender</td>
+                <td>@student.DateOfBirth.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>

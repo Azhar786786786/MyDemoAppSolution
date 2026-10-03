@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model MyDemoApp.Models.Student
+
+<h1>Student Details</h1>
+<h2>@Model.RollNumber</h2>
+<h2>@Model.Name</h2>
+<h2>@Model.Gender</h2>
+<h2>@Model.DateOfBirth.ToShortDateString()</h2>

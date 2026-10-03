@@ -1,0 +1,42 @@
+﻿﻿
+<!doctype html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="nbar">
+        <div class="brand">XYZ Enterprises</div>
+        <div class="navitems">
+            <a asp-controller="Home" asp-action="Index" class="item">Home</a>
+            <a asp-controller="Home" asp-action="AboutUs" class="item">About Us</a>
+            <a asp-controller="Home" asp-action="Facilities" class="item">Facilities</a>
+            <a href="#" class="item">Gallery</a>
+            <a href="#" class="item">Contact Us</a>
+        </div>
+    </div>
+    <div class="banner">
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <div class="fcontent">
+            &copy;Indian School of Coding
+        </div>
+        <div class="fcontent">
+            MyDemoApp, 4rth Floor, Pahalwaan Chawk, Batla House, Jamiya Nagar
+        </div>
+        <div class="fcontent">
+            MyDemoApp, 4rth Floor, Pahalwaan Chawk, Batla House, Jamiya Nagar
+        </div>
+    </div>
+</body>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("section1", required: false);
+</html>

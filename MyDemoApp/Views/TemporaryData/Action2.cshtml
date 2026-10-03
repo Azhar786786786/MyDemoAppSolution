@@ -1,0 +1,11 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@* ya to TempData.Peek("Result") use karte hai temp ke aage badane ke liye ya fir simple  Temp use karke neeche keep wala method use karte hai *@
+<h1>Sum: @TempData["Result"] </h1>
+@{
+    TempData.Keep("Result");
+}
+<a href="Action3">Click on Me and go to next action...</a>
