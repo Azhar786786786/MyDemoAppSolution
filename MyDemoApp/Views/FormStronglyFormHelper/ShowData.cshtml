@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Employee
+<h1 class="p-2 bg-secondary text-white">Employee Information</h1>
+<div class="p-4 bg-body-secondary">
+    <div class="m-2">
+        Employee Name: @Model.Name
+    </div>
+    <div class="m-2">
+        Employee DOB: @Model.DateOfBirth
+    </div>
+    <div class="m-2">
+        Employee Gender: @Model.Gender
+    </div>
+    <div class="m-2">
+        Employee Designation: @Model.Designation
+    </div>
+    <div class="m-2">
+        Employee Salary: @Model.Salary
+    </div>
+    <a href="@Url.Action("Index", "FormStronglyFormHelper")" class="btn btn-primary m-2">Back to Form</a>
+</div>

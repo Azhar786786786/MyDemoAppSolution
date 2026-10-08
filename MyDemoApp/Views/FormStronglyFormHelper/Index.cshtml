@@ -1,0 +1,37 @@
+﻿﻿@{
+ViewData["Title"] = "FormStronglyFormHelper Page";
+}
+@model Employee
+<h1 class="p-2 bg-secondary text-white">Employee Information Form</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 p-3 border border-2 bg-body-secondary">
+            @using (Html.BeginForm("ShowData", "FormStronglyFormHelper", "post"))
+            {
+                <div>
+                    @Html.LabelFor(x => x.Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.DateOfBirth, new { @class = "form-label" })
+                    @Html.TextBoxFor(x => x.DateOfBirth, new { @class = "form-control", @type = "date" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.Gender, new { @class = "form-label" })
+                    @Html.DropDownListFor(x => x.Gender, new SelectList(new[] { "Male", "Female", "Other" }), new { @class = "form-select" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.Designation, new { @class = "form-label" })
+                    @Html.DropDownListFor(x => x.Designation, new SelectList(new[] { "Manager", "Executive", "Engineer", "Cleark" }), new { @class = "form-select" })
+                </div>
+                <div>
+                    @Html.LabelFor(x => x.Salary, new { @class = "form-label" })
+                    @Html.TextBoxFor(x => x.Salary, new { @class = "form-control", @type = "number" })
+                </div>
+                <div class="mt-2">
+                    <input type="submit" value="Submit" class="btn btn-success" />
+                </div>
+            }
+        </div>
+    </div>
+</div>
