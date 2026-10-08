@@ -1,0 +1,37 @@
+﻿﻿@{
+ViewData["Title"] = "FormTemplatedFormHelper Page";
+}
+@model Student
+<h1 class="p-2 bg-secondary text-white">Registration Form</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            @using (Html.BeginForm("ShowData", "FormTemplatedFormHelper", "post"))
+            {
+                <div>
+                    @Html.DisplayNameFor(x => x.RollNumber)
+                    @Html.EditorFor(x => x.RollNumber)
+                </div>
+                <div>
+                    @Html.DisplayNameFor(x => x.Name)
+                    @Html.EditorFor(x => x.Name)
+                </div>
+                <div>
+                    @Html.DisplayNameFor(x => x.Gender)
+                    @Html.EditorFor(x => x.Gender)
+                </div>
+                <div>
+                    @Html.DisplayNameFor(x => x.DateOfBirth)
+                    @Html.EditorFor(x => x.DateOfBirth)
+                </div>
+                <div>
+                    @Html.DisplayNameFor(x => x.IsDisable)
+                    @Html.EditorFor(x => x.IsDisable)
+                </div>
+                <div class="mt-2">
+                    <input type="submit" value="Submit" class="btn btn-secondary" />
+                </div>
+            }
+        </div>
+    </div>
+</div>
