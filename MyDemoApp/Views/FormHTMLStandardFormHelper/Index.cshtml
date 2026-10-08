@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "FormHTMLStandardFormHelper Page";
+}
+
+<h1 class="p-2 bg-secondary text-white">Registration Form</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            @using (Html.BeginForm("ShowData", "FormHTMLStandardFormHelper", "Post"))
+            {
+                <div class="mb-2">
+                    @Html.Label("lblName", "Name", new { @class = "form-label" })
+                    @Html.TextBox("txtName", null, new { @class = "form-control", @placeholder = "Enter your name" })
+                </div>
+                <div class="mb-2">
+                    @Html.Label("lblFName", "Father's Name", new { @class = "form-label" })
+                    @Html.TextBox("txtFName", null, new { @class = "form-control", @placeholder = "Enter your father's name" })
+                </div>
+                <div class="mb-2">
+                    @Html.Label("lblPassword", "Password", new { @class = "form-label" })
+                    @Html.Password("txtPass", null, new { @class = "form-control", @placeholder = "Enter your password" })
+                </div>
+                <div class="mb-2">
+                    @Html.Label("lblRePassword", "Retype Password", new { @class = "form-label" })
+                    @Html.Password("txtRPass", null, new { @class = "form-control", @placeholder = "Retype your password" })
+                </div>
+                <div class="mb-2">
+                    @Html.Label("lblCity", "City", new { @class = "form-label" })
+                    @Html.DropDownList("City", new SelectList(new[] { "Gorakhpur", "Lucknow", "Kanpur", "Delhi", "Kolkata", "Hydrabad", "Jaipur", "Chennai", "Mumbai", "Goa" }), new { @class = "form-select" })
+                </div>
+                <div class="mb-2 p-3 border border-2 border-danger">
+                    @Html.Label("lblGender", "Gender", new { @class = "form-label" })
+                    @Html.RadioButton("Gender", "Male")Male
+                    @Html.RadioButton("Gender", "Female")Female
+                    @Html.RadioButton("Gender", "Other")Other
+                </div>
+            }
+        </div>
+    </div>
+</div>
